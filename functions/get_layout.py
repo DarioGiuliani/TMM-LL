@@ -38,7 +38,7 @@ def header():
                                 and "givenname" in st.session_state["user_profile"]
                             ):
                                 st.markdown(
-                                    {st.session_state["user_profile"]["givenname"]}
+                                    st.session_state["user_profile"]["givenname"]
                                 )
 
 

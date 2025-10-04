@@ -17,4 +17,4 @@ from .get_timer import get_timer
 from .get_user_profile import get_user_profile
 from .create_user_profile import create_user_profile
 from .add_poll import add_poll
-
+from objects.enumerations.role_enum import Role
