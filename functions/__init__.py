@@ -15,3 +15,4 @@ from .get_playerstats import get_playerstats
 from .get_rankings import get_rankings
 from .get_timer import get_timer
 from .get_user_profile import get_user_profile
+from objects.enumerations.role_enum import Role

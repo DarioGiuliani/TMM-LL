@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-
 import functions
 
 
@@ -82,9 +81,10 @@ def main():
             "Jank Points",
         ),
     )
-    if st.button("Run calculations", use_container_width=True):
-        result = functions.calculations()
-        st.write("Calculations done!")
+    if not (st.session_state.get("user_profile") is None) and functions.Role.ADMIN.value in st.session_state["user_profile"]["roles"]:
+        if st.button("Run calculations", use_container_width=True):
+            result = functions.calculations()
+            st.write("Calculations done!")
 
     # Container 3
     st.header("Jank awards", divider="gray")
